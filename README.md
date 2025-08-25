@@ -18,7 +18,7 @@ A mobile-first web application designed to help women in India's informal sector
 📱 Mobile-First Design with responsive layout
 
 🚀 Live Demo
-Visit: https://yourusername.github.io/nari-suraksha-saathi
+Visit: https://badhari-2003.github.io/nari-suraksha-saathi/
 
 (Replace yourusername with your actual GitHub username)
 
