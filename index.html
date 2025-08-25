@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nari Suraksha Saathi - Woman's Safety Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="app-title">नारी सुरक्षा साथी</h1>
+        <p class="app-subtitle">Nari Suraksha Saathi</p>
+        <p class="tagline">Your Safety Companion</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="welcome-card card">
+                <div class="card__body">
+                    <h2>Welcome to Your Safety Companion</h2>
+                    <p>A safe space to learn about your rights, find help, and access resources for workplace safety.</p>
+                    
+                    <div class="prototype-disclaimer">
+                        <h3>⚠️ Important Notice</h3>
+                        <p>This is a <strong>prototype demonstration</strong>. No real reports are sent and all contact information is simulated for educational purposes only.</p>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="btn btn--primary quick-action-btn" data-section="report">
+                            <span class="btn-icon">📝</span>
+                            Report Incident (Demo)
+                        </button>
+                        <button class="btn btn--secondary quick-action-btn" data-section="rights">
+                            <span class="btn-icon">⚖️</span>
+                            Know Your Rights
+                        </button>
+                        <button class="btn btn--secondary quick-action-btn" data-section="help">
+                            <span class="btn-icon">🤝</span>
+                            Find Help
+                        </button>
+                        <button class="btn btn--secondary quick-action-btn" data-section="safety">
+                            <span class="btn-icon">🛡️</span>
+                            Safety Tips
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Incident Section -->
+        <section id="report" class="section">
+            <div class="section-header">
+                <h2>Report Incident</h2>
+                <div class="prototype-disclaimer">
+                    <p><strong>⚠️ PROTOTYPE DISCLAIMER:</strong> This is a demonstration only. Your report will NOT be sent to authorities. It is for prototype purposes only.</p>
+                </div>
+            </div>
+
+            <form id="incident-form" class="incident-form card">
+                <div class="card__body">
+                    <div class="form-group">
+                        <label for="incident-type" class="form-label">Type of Incident *</label>
+                        <select id="incident-type" class="form-control" required>
+                            <option value="">Select incident type</option>
+                            <option value="verbal">Verbal Harassment</option>
+                            <option value="physical">Physical Harassment</option>
+                            <option value="sexual">Sexual Harassment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incident-description" class="form-label">Brief Description *</label>
+                        <textarea id="incident-description" class="form-control" rows="4" placeholder="Describe what happened..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incident-location" class="form-label">Location</label>
+                        <input type="text" id="incident-location" class="form-control" placeholder="Where did this occur?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incident-date" class="form-label">Date of Incident</label>
+                        <input type="date" id="incident-date" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Would you like to remain anonymous?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="anonymous" value="yes" checked>
+                                <span class="radio-text">Yes, keep me anonymous</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="anonymous" value="no">
+                                <span class="radio-text">No, I'm comfortable sharing my identity</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">Submit Report (Prototype)</button>
+                </div>
+            </form>
+
+            <div id="report-success" class="report-success card hidden">
+                <div class="card__body">
+                    <h3>📋 Report Submitted (Demo)</h3>
+                    <p>Thank you for sharing. In a real application, this would be sent securely to appropriate authorities.</p>
+                    <div id="submitted-data" class="submitted-data"></div>
+                    <button class="btn btn--secondary" onclick="resetReportForm()">Submit Another Report</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Rights Section -->
+        <section id="rights" class="section">
+            <div class="section-header">
+                <h2>My Rights</h2>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="english">English</button>
+                    <button class="lang-btn" data-lang="hindi">हिंदी</button>
+                </div>
+            </div>
+
+            <div class="rights-content">
+                <div class="rights-card card">
+                    <div class="card__body">
+                        <h3>What is Harassment?</h3>
+                        <ul id="harassment-list" class="rights-list"></ul>
+                    </div>
+                </div>
+
+                <div class="rights-card card">
+                    <div class="card__body">
+                        <h3>Your Rights to Safety</h3>
+                        <ul id="rights-list" class="rights-list"></ul>
+                    </div>
+                </div>
+
+                <div class="rights-card card">
+                    <div class="card__body">
+                        <h3>POSH Act Simplified</h3>
+                        <ul id="posh-list" class="rights-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Help Section -->
+        <section id="help" class="section">
+            <div class="section-header">
+                <h2>Find Help</h2>
+                <div class="prototype-disclaimer">
+                    <p><strong>Note:</strong> This directory contains simulated contact information for demonstration. In a real app, these would connect to verified organizations.</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-ngos" class="form-control search-input" placeholder="Search by focus area...">
+            </div>
+
+            <div id="ngo-list" class="ngo-list"></div>
+        </section>
+
+        <!-- Safety Tips Section -->
+        <section id="safety" class="section">
+            <div class="section-header">
+                <h2>Safety Tips</h2>
+                <p>Practical advice for staying safe in the workplace</p>
+            </div>
+
+            <div id="safety-tips-list" class="safety-tips-list"></div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-section="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" data-section="report">
+            <span class="nav-icon">📝</span>
+            <span class="nav-label">Report</span>
+        </button>
+        <button class="nav-item" data-section="rights">
+            <span class="nav-icon">⚖️</span>
+            <span class="nav-label">Rights</span>
+        </button>
+        <button class="nav-item" data-section="help">
+            <span class="nav-icon">🤝</span>
+            <span class="nav-label">Help</span>
+        </button>
+        <button class="nav-item" data-section="safety">
+            <span class="nav-icon">🛡️</span>
+            <span class="nav-label">Safety</span>
+        </button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
